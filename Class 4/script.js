@@ -32,23 +32,21 @@ if else
 else if 
 
 */
-// console.log("Hello1");
-// console.log("Hello2");
-// console.log("Hello3");
+console.log("Hello1");
+console.log("Hello2");
+console.log("Hello3");
 
 // if(condition){
 //     code
 // }
-// let name = "Ali"
-// let operator = "*" 
-// let num1 = 45 ;
-// let num2 = 34;
-// if(operator == "+"){
-//     console.log(num1+num2);    
-// } else {
-//     console.log("Invalid Operator");
-    
-// }
+let name = "Ali"
+let operator = "*" 
+let num1 = 45 ;
+let num2 = 34;
+if(4>2){
+    console.log("yes");
+        
+} 
 
 
 
@@ -67,10 +65,10 @@ else if
 
 */
 
-let username = prompt("Enter username :")
-let password = prompt("Enter password :")
+// let username = prompt("Enter username :")
+// let password = prompt("Enter password :")
 
-if(username == "alikhan118" && password == "1234"){
-    document.body.style.backgroundColor = "red"
-    document.body.innerHTML = "<h1> you are loged In</h1>"
-}
+// if(username == "alikhan118" && password == "1234"){
+//     document.body.style.backgroundColor = "red"
+//     document.body.innerHTML = "<h1> you are loged In</h1>"
+// }
