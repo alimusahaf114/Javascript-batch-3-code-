@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        input{
+            width: 80px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button{
+            width: 80px;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        h1{
+            width: 400px;
+            padding: 20px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <p>This is paragraph</p>
+    <p id="second">This is para 2</p>
+    <p class="third">This is 3 paragraph</p> -->
+
+    <!-- <p></p>
+    <h1 style="color: red;"></h1>
+    <span ></span> -->
+
+
+    <!-- <p></p> -->
+     <!-- <input type="text" >
+     <button
+     onclick="
+     
+     let data = document.querySelector('input').value
+     document.querySelector('p').textContent = data
+     
+     
+     "
+     >ShowText</button>
+     <p></p> -->
+
+    Num1:  <input type="number" id="num1"> <br>
+    Num2: <input type="number" id="num2"> <br>
+    Operator: <input type="text" id="Oper"> <br>
+    <button
+    onclick="
+    let num1 = document.querySelector('#num1').value
+    let num2 = document.querySelector('#num2').value
+    let operator = document.querySelector('#Oper').value
+
+    if(operator == '+'){
+        let sum = Number(num1) + Number(num2)
+        document.querySelector('h1').textContent = `Sum of ${num1} + ${num2} = ${sum}`
+    } else if (operator == '-'){
+        let subs = Number(num1) - Number(num2)
+        document.querySelector('h1').textContent = `Subs of ${num1} - ${num2} = ${subs}`
+    }else if (operator == '*'){
+        let mul = Number(num1) * Number(num2)
+        document.querySelector('h1').textContent = `Sum of ${num1} * ${num2} = ${mul}`
+    }else if (operator == '/'){
+        let div = Number(num1) / Number(num2)
+        document.querySelector('h1').textContent = `Sum of ${num1} / ${num2} = ${div}`
+    }  
+    "
+    >Calculate</button>
+    <h1></h1>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
