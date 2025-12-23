@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<button onclick="
+    window.location.href = 'index.html'
+    ">Back</button>
+<h1>HTML CSS JS Logic Cards</h1>
+
+<div class="container">
+
+    <!-- Card 1: Greater Number -->
+    <div class="card">
+        <h3>Greater Number</h3>
+        <input id="g1" type="number" placeholder="Enter first number">
+        <input id="g2" type="number" placeholder="Enter second number">
+        <button onclick="checkGreater()">Check</button>
+        <div class="result" id="gResult"></div>
+    </div>
+
+    <!-- Card 2: Remainder -->
+    <div class="card">
+        <h3>Find Remainder</h3>
+        <input id="r1" type="number" placeholder="Enter dividend">
+        <input id="r2" type="number" placeholder="Enter divisor">
+        <button onclick="findRemainder()">Find</button>
+        <div class="result" id="rResult"></div>
+    </div>
+
+    <!-- Card 3: Addition -->
+    <div class="card">
+        <h3>Add Two Numbers</h3>
+        <input id="a1" type="number" placeholder="Enter first number">
+        <input id="a2" type="number" placeholder="Enter second number">
+        <button onclick="addNumbers()">Add</button>
+        <div class="result" id="aResult"></div>
+    </div>
+
+    <!-- Card 4: Area of Rectangle -->
+    <div class="card">
+        <h3>Area of Rectangle</h3>
+        <input id="l" type="number" placeholder="Length">
+        <input id="w" type="number" placeholder="Width">
+        <button onclick="areaRectangle()">Calculate</button>
+        <div class="result" id="areaResult"></div>
+    </div>
+
+    <!-- Card 5: Even / Odd -->
+    <div class="card">
+        <h3>Even or Odd</h3>
+        <input id="e1" type="number" placeholder="Enter a number">
+        <input disabled placeholder="Not Required">
+        <button onclick="checkEvenOdd()">Check</button>
+        <div class="result" id="eResult"></div>
+    </div>
+
+    <!-- Card 6: Max & Min -->
+    <div class="card">
+        <h3>Max & Min</h3>
+        <input id="m1" type="number" placeholder="Enter first number">
+        <input id="m2" type="number" placeholder="Enter second number">
+        <button onclick="findMaxMin()">Find</button>
+        <div class="result" id="mResult"></div>
+    </div>
+
+</div>
+
+<script>
+    function checkGreater() {
+        let a = Number(g1.value);
+        let b = Number(g2.value);
+        gResult.innerText = (a > b) ? a + " is greater" : b + " is greater";
+    }
+
+    function findRemainder() {
+        let a = Number(r1.value);
+        let b = Number(r2.value);
+        rResult.innerText = "Remainder = " + (a % b);
+    }
+
+    function addNumbers() {
+        let a = Number(a1.value);
+        let b = Number(a2.value);
+        aResult.innerText = "Sum = " + (a + b);
+    }
+
+    function areaRectangle() {
+        let length = Number(l.value);
+        let width = Number(w.value);
+        areaResult.innerText = "Area = " + (length * width);
+    }
+
+    function checkEvenOdd() {
+        let n = Number(e1.value);
+        eResult.innerText = (n % 2 === 0) ? "Even Number" : "Odd Number";
+    }
+
+    function findMaxMin() {
+        let a = Number(m1.value);
+        let b = Number(m2.value);
+        mResult.innerText = "Max: " + Math.max(a, b) + " | Min: " + Math.min(a, b);
+    }
+</script>
+
+</body>
+</html>
