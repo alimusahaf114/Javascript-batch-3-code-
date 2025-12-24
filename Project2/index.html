@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        u: <input type="number" id="u">  
+        a: <input type="number" id="a">  
+        t: <input type="number" id="t">  
+        <button onclick="
+        let u = Number(document.querySelector('#u').value)
+        let a = Number(document.querySelector('#a').value)
+        let t = Number(document.querySelector('#t').value)
+        
+        let s = (u*t) + 0.5 * a * t**2
+        
+        document.querySelector('.box').textContent = `The value s = ${s}`
+        
+        
+        
+        
+        
+        
+        ">Calculate</button>
+        <div class="box" >           
+        </div>
+    </div>
+</body>
+</html>
