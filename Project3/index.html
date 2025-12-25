@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+    }
+    .calculator {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        width: 250px;
+    }
+    input[type="text"] {
+        width: 100%;
+        height: 50px;
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-align: right;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    button {
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #eee;
+        transition: background-color 0.2s;
+    }
+    button:hover {
+        background-color: #ddd;
+    }
+    .operator {
+        background-color: #ff9500;
+        color: #fff;
+    }
+    .operator:hover {
+        background-color: #e08a00;
+    }
+    .equal {
+        grid-column: span 2;
+        background-color: #34c759;
+        color: #fff;
+    }
+    .equal:hover {
+        background-color: #28a745;
+    }
+    .clear {
+        background-color: #ff3b30;
+        color: #fff;
+    }
+    .clear:hover {
+        background-color: #e02921;
+    }
+</style>
+</head>
+<body>
+<div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+        <button onclick="
+            displayValue += '7'
+            document.querySelector('#display').value = displayValue;
+            ">7</button>
+        <button onclick="
+            displayValue += '8'
+            document.querySelector('#display').value = displayValue;
+            ">8</button>
+        <button onclick="
+            displayValue += '9'
+            document.querySelector('#display').value = displayValue;
+            ">9</button>
+        <button onclick="
+            displayValue += '/'
+            document.querySelector('#display').value = displayValue;
+            ">/</button>
+
+        <button onclick="
+            displayValue += '4'
+            document.querySelector('#display').value = displayValue;
+            ">4</button>
+        <button onclick="
+            displayValue += '5'
+            document.querySelector('#display').value = displayValue;
+            ">5</button>
+        <button onclick="
+            displayValue += '6'
+            document.querySelector('#display').value = displayValue;
+            ">6</button>
+        <button onclick="
+            displayValue += '*'
+            document.querySelector('#display').value = displayValue;
+            ">*</button>
+
+        <button onclick="
+            displayValue += '1'
+            document.querySelector('#display').value = displayValue;
+            ">1</button>
+        <button onclick="
+            displayValue += '2'
+            document.querySelector('#display').value = displayValue;
+            ">2</button>
+        <button onclick="
+            displayValue += '3'
+            document.querySelector('#display').value = displayValue;
+            ">3</button>
+        <button onclick="
+            displayValue += '-'
+            document.querySelector('#display').value = displayValue;
+            ">-</button>
+
+        <button onclick="
+            displayValue += '0'
+            document.querySelector('#display').value = displayValue;
+            ">0</button>
+        <button onclick="
+            displayValue = ' '
+            document.querySelector('#display').value = displayValue;
+            ">C</button>
+        <button onclick="
+            let result = eval(displayValue) 
+            document.querySelector('#display').value = result;
+            ">=</button>
+        <button onclick="
+            displayValue += '+'
+            document.querySelector('#display').value = displayValue;
+            ">+</button>
+            <button onclick="
+            displayValue += '.'
+            document.querySelector('#display').value = displayValue;
+            ">.</button>
+    </div>
+</div>
+
+<script>
+    let displayValue = '';
+ document.querySelector("#display").value = displayValue;
+</script>
+</body>
+</html>
