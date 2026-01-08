@@ -1,8 +1,9 @@
-let todoData = ['work' , 'play' , 'go']
+let todoData = []
 displayData()
 function myTodo(){
     let todoInput = document.getElementById("todoInput").value
-    todoData.push(todoInput)
+    let todoDate = document.getElementById("todoDate").value
+    todoData.push({todo: todoInput , date:todoDate})
     document.getElementById("todoInput").value = ''
     displayData()
 }
@@ -13,7 +14,8 @@ function displayData(){
     for(let i = 0 ; i < todoData.length ; i++){
         myhtml  += `
         <div>
-        <span> ${todoData[i]} </span>
+        <span> ${todoData[i].todo} </span>
+        <span> ${todoData[i].date} </span>
         <button onclick="todoData.splice(${i},1)
         displayData()
         "> Delete </button>
